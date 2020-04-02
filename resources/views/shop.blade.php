@@ -175,10 +175,10 @@
 														</div>
 														<div class="entry-c">
 															<div class="entry-title">
-																<h4><a href="#">Women Hand Bag</a></h4>
+																<h4><a href="#">{{ $item_name }}</a></h4>
 															</div>
 															<ul class="entry-meta">
-																<li class="color">$15</li>
+																<li class="color">${{ $price }}</li>
 																<li><i class="icon-star3"></i> <i class="icon-star3"></i> <i class="icon-star3"></i> <i class="icon-star3"></i> <i class="icon-star3"></i></li>
 															</ul>
 														</div>
@@ -569,10 +569,10 @@
 										<div class="product-quickview"><a href="#" data-toggle="tooltip" data-placement="top" title="Available Sizes: S | M | L"><i class="icon-info"></i></a></div>
 									</div>
 									<div class="portfolio-desc nobottompadding">
-										<h3><a href="#">Leather Bag</a></h3>
+										<h3><a href="#">{{  $item_name  }}</a></h3>
 										<span class="notopmargin"><a href="#">Grey Messenger Bag</a></span>
 										<div class="item-price">
-											<span>&euro;29.99</span>
+											<span>&euro;{{ $price }}</span>
 											<div class="rating-stars">
 												<i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i>
 											</div>

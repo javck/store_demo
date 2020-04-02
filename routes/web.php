@@ -33,25 +33,31 @@ Route::any('/any', function() {
 //指派給控制器的某個Action
 Route::get('/home','HomeController@index');
 
+
+//指派給控制器的某個Action，限定登入才能訪問
+//Route::get('/home','HomeController@index')->middleware('auth');
+
 //傳送單一參數
-Route::get('/items/{id}',function($id){
-    return "你購買的是第" . $id . "個商品";
-});
+// Route::get('/items/{id}',function($id){
+//     return "你購買的是第" . $id . "個商品";
+// });
 
-//傳送多個參數
-Route::get('/items/{id}/{qty}', function ($id,$qty) {
- return "你購買的是第" . $id . "個商品，共買了" . $qty . "個";
-});
+// //傳送多個參數
+// Route::get('/items/{id}/{qty}', function ($id,$qty) {
+//  return "你購買的是第" . $id . "個商品，共買了" . $qty . "個";
+// });
 
-//參數非必填
-Route::get('/items/{id?}', function ($id = 1) {
- return "你購買的是第" . $id . "個商品";
-});
+// //參數非必填
+// Route::get('/items/{id?}', function ($id = 1) {
+//  return "你購買的是第" . $id . "個商品";
+// });
 
 //Route Model Binding
 Route::get('/users/{user}',function(\App\User $user){
     return $user;
 });
 
+
+Route::resource('items', 'ItemController');
 
 

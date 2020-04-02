@@ -2,10 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Item;
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class ItemController extends Controller
 {
+
+    public function __construct()
+    {
+        //保護控制器裡的所有方法均需要登入才能訪問，除了index
+        //$this->middleware('auth')->except('index');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -13,16 +21,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        //$data = ['item_name' => "Laravel5.8從入門到實戰" , 'price' => 2400];
-        //return view('shop')->with($data); //用with()傳遞參數包
-
-        //return view('shop',$data); //用view()的第二參數傳遞參數包
-
-        $item_name = "Laravel5.8從入門到實戰";
-        $price     = 2400;
-        //compact()能夠幫你把變數打包成一個陣列，變數名稱作為鍵
-        return view('shop', compact('item_name','price')); //用view()的第二參數搭配compact()傳遞參數包
-        //return view('shop'); //沒傳變數的版本，現在會報錯
+        return "商品列表";
     }
 
     /**
@@ -49,21 +48,22 @@ class HomeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Item  $item
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        //
+        return "你購買的是第" . $id . "個商品";
+
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Item  $item
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Item $item)
     {
         //
     }
@@ -72,10 +72,10 @@ class HomeController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Item  $item
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Item $item)
     {
         //
     }
@@ -83,10 +83,10 @@ class HomeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Item  $item
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Item $item)
     {
         //
     }
