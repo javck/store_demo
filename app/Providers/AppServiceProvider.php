@@ -13,7 +13,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        //修改Model Factory所使用的Faker之預設語系為繁中
+        // $this->app->singleton(\Faker\Generator::class,function(){
+        //     return \Faker\Factory::create('zh_TW');
+        // });
     }
 
     /**
