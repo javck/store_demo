@@ -33,6 +33,7 @@ Route::any('/any', function() {
 //指派給控制器的某個Action
 Route::get('/home','HomeController@index');
 
+Route::get('/demo','HomeController@demo');
 
 //指派給控制器的某個Action，限定登入才能訪問
 //Route::get('/home','HomeController@index')->middleware('auth');
