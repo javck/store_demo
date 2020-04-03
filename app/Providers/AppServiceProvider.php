@@ -28,7 +28,7 @@ class AppServiceProvider extends ServiceProvider
 
         //提供資料給部分視圖
         view()->composer(['demo','shop'],function($view){
-            $view->with('partial_tel','0223456789')
+            $view->with('partial_tel','0223456789');
         });
     }
 }
