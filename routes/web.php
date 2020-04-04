@@ -16,9 +16,7 @@ Route::get('/hello',function(){
 });
 
 //回傳視圖
-Route::get('/', function () {
-    return view('shop');
-});
+Route::get('/', 'HomeController@index');
 
 //Match，符合多種請求方法
 Route::match(['get', 'post'], '/match', function() {
@@ -34,6 +32,15 @@ Route::any('/any', function() {
 Route::get('/home','HomeController@index');
 
 Route::get('/demo','HomeController@demo');
+
+//測試區路由=================================================
+//測試新增資料
+Route::get('/addItem','ItemController@store');
+//測試更新資料
+Route::get('/updateItem/{item}','ItemController@update');
+//測試刪除資料
+Route::get('/deleteItem/{item}','ItemController@destroy');
+//=========================================================
 
 //指派給控制器的某個Action，限定登入才能訪問
 //Route::get('/home','HomeController@index')->middleware('auth');
