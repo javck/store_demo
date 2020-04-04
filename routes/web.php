@@ -68,4 +68,9 @@ Route::get('/users/{user}',function(\App\User $user){
 
 Route::resource('items', 'ItemController');
 
+Route::get('/items/showCgy/{item}','ItemController@showCgy');
+Route::get('/cgies/showItems/{cgy}','CgyController@showItems');
+Route::get('/items/showOrders/{item}','ItemController@showOrders');
+Route::get('/orders/showItems/{order}','OrderController@showItems');
+Route::get('/orders/showContent/{order}','OrderController@showContent');
 

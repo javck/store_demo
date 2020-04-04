@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AlterItemsTable extends Migration
+class AddCgyIdItemsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,8 +14,8 @@ class AlterItemsTable extends Migration
     public function up()
     {
         Schema::table('items', function (Blueprint $table) {
-            $table->renameColumn('pic','price');
-            $table->text('pic_url',255)->nullable();
+            $table->unsignedBigInteger('cgy_id')->index();
+            $table->foreign('cgy_id')->references('id')->on('cgies')->onDelete('cascade');
         });
     }
 
@@ -27,8 +27,8 @@ class AlterItemsTable extends Migration
     public function down()
     {
         Schema::table('items', function (Blueprint $table) {
-            $table->renameColumn('price','pic');
-            $table->removeColumn('pic_url');
+            $table->dropForeign(['cgy_id']);
+            $table->removeColumn('cgy_id');
         });
     }
 }

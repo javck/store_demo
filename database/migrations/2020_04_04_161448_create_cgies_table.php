@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AlterItemsTable extends Migration
+class CreateCgiesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,12 @@ class AlterItemsTable extends Migration
      */
     public function up()
     {
-        Schema::table('items', function (Blueprint $table) {
-            $table->renameColumn('pic','price');
-            $table->text('pic_url',255)->nullable();
+        Schema::create('cgies', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('title',100);
+            $table->string('desc',500)->nullable();
+            $table->boolean('enabled')->default(true);
+            $table->timestamps();
         });
     }
 
@@ -26,9 +29,6 @@ class AlterItemsTable extends Migration
      */
     public function down()
     {
-        Schema::table('items', function (Blueprint $table) {
-            $table->renameColumn('price','pic');
-            $table->removeColumn('pic_url');
-        });
+        Schema::dropIfExists('cgies');
     }
 }

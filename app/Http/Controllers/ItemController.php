@@ -131,4 +131,16 @@ class ItemController extends Controller
         $item->delete();
         return redirect('/items');
     }
+
+    //顯示商品的分類
+    public function showCgy(Item $item)
+    {
+        return $item->cgy;
+    }
+
+    //顯示商品屬於哪些訂單
+    public function showOrders(Item $item)
+    {
+        return $item->orders;
+    }
 }
