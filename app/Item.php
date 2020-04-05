@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Item extends Model
 {
-    protected $fillable = ['title','desc','price','enabled','pic_url','sell_at'];
+    protected $fillable = ['title','desc','price','enabled','pic_url','sell_at','cgy_id'];
 
     //該商品的分類
     protected function cgy(){
