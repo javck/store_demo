@@ -74,3 +74,8 @@ Route::get('/items/showOrders/{item}','ItemController@showOrders');
 Route::get('/orders/showItems/{order}','OrderController@showItems');
 Route::get('/orders/showContent/{order}','OrderController@showContent');
 
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
