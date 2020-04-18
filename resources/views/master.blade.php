@@ -238,14 +238,14 @@
                                     <div>Men</div>
                                 </a>
                                 <div class="mega-menu-content style-2 clearfix"
-                                    style="background-image: url('images/shop/shop-menu.jpg'); background-repeat: no-repeat; background-position: right bottom;">
+                                    style="background-image: url('http://themes.semicolonweb.com/html/canvas/images/shop/shop-menu.jpg'); background-repeat: no-repeat; background-position: right bottom;">
                                     <ul class="mega-menu-column col-xl-2 col-lg-3">
                                         <li>
                                             <div class="widget clearfix">
 
                                                 <div class="iportfolio clearfix">
                                                     <div class="portfolio-image clearfix">
-                                                        <a href="#"><img src="/ecommerce/images/items/1-1.jpg"
+                                                        <a href="#"><img src="http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/items/1-1.jpg"
                                                                 alt="Grey Bag"></a>
                                                         <div class="product-cart"><a href="#"><i
                                                                     class="icon-shopping-cart"></i></a></div>
@@ -279,7 +279,7 @@
                                                 <div class="widget-last-view">
                                                     <div class="spost clearfix">
                                                         <div class="entry-image">
-                                                            <a href="#"><img src="/ecommerce/images/items/2-1.jpg"
+                                                            <a href="#"><img src="http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/items/2-1.jpg"
                                                                     alt="Image"></a>
                                                         </div>
                                                         <div class="entry-c">
@@ -299,7 +299,7 @@
 
                                                     <div class="spost clearfix">
                                                         <div class="entry-image">
-                                                            <a href="#"><img src="/ecommerce/images/items/3-1.jpg"
+                                                            <a href="#"><img src="http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/items/3-1.jpg"
                                                                     alt="Image"></a>
                                                         </div>
                                                         <div class="entry-c">
@@ -319,7 +319,7 @@
 
                                                     <div class="spost clearfix">
                                                         <div class="entry-image">
-                                                            <a href="#"><img src="/ecommerce/images/items/4-1.jpg"
+                                                            <a href="#"><img src="http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/items/4-1.jpg"
                                                                     alt="Image"></a>
                                                         </div>
                                                         <div class="entry-c">
@@ -498,7 +498,7 @@
                                 <div class="top-cart-items">
                                     <div class="top-cart-item clearfix">
                                         <div class="top-cart-item-image">
-                                            <a href="#"><img src="/ecommerce/images/featured/1.jpg"
+                                            <a href="#"><img src="http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/featured/1.jpg"
                                                     alt="Blue Shoulder Bag" /></a>
                                         </div>
                                         <div class="top-cart-item-desc">
@@ -509,7 +509,7 @@
                                     </div>
                                     <div class="top-cart-item clearfix">
                                         <div class="top-cart-item-image">
-                                            <a href="#" class="t400"><img src="/ecommerce/images/featured/6.jpg"
+                                            <a href="#" class="t400"><img src="http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/featured/6.jpg"
                                                     alt="Leather Bag" /></a>
                                         </div>
                                         <div class="top-cart-item-desc">
@@ -550,7 +550,7 @@
             <div class="swiper-container swiper-parent">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"
-                        style="background: #FFF url('/ecommerce/images/slider/1.jpg') no-repeat center right; background-size: auto 100%;">
+                        style="background: #FFF url('http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/slider/1.jpg') no-repeat center right; background-size: auto 100%;">
                         <div class="container clearfix">
                             <div class="slider-caption" style="margin-top: -30px;">
                                 <div class="emphasis-title nobottommargin">
@@ -569,7 +569,7 @@
                         <div class="slide-number font-primary">O1</div>
                     </div>
                     <div class="swiper-slide"
-                        style="background: #FFF url('/ecommerce/images/slider/2.jpg') no-repeat center right; background-size: auto 100%;">
+                        style="background: #FFF url('http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/slider/2.jpg') no-repeat center right; background-size: auto 100%;">
                         <div class="container clearfix">
                             <div class="slider-caption" style="margin-top: -30px;">
                                 <div class="emphasis-title nobottommargin">
@@ -588,7 +588,7 @@
                         <div class="slide-number font-primary">O2</div>
                     </div>
                     <div class="swiper-slide"
-                        style="background: #FFF url('images/ecommerce/images/slider/3.jpg') no-repeat center right; background-size: auto 100%;">
+                        style="background: #FFF url('http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/slider/3.jpg') no-repeat center right; background-size: auto 100%;">
                         <div class="container clearfix">
                             <div class="slider-caption" style="margin-top: -30px;">
                                 <div class="emphasis-title nobottommargin">
@@ -607,7 +607,7 @@
                         <div class="slide-number font-primary">O3</div>
                     </div>
                     <div class="swiper-slide"
-                        style="background: #FFF url('images/ecommerce/images/slider/4.jpg') no-repeat center right; background-size: auto 100%;">
+                        style="background: #FFF url('http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/slider/4.jpg') no-repeat center right; background-size: auto 100%;">
                         <div class="container clearfix">
                             <div class="slider-caption" style="margin-top: -30px;">
                                 <div class="emphasis-title nobottommargin">
@@ -626,7 +626,7 @@
                         <div class="slide-number font-primary">O4</div>
                     </div>
                     <div class="swiper-slide"
-                        style="background: #FFF url('images/ecommerce/images/slider/5.jpg') no-repeat center right; background-size: auto 100%;">
+                        style="background: #FFF url('http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/slider/5.jpg') no-repeat center right; background-size: auto 100%;">
                         <div class="container clearfix">
                             <div class="slider-caption" style="margin-top: -30px;">
                                 <div class="emphasis-title nobottommargin">
@@ -645,7 +645,7 @@
                         <div class="slide-number font-primary">O5</div>
                     </div>
                     <div class="swiper-slide"
-                        style="background: #FFF url('images/ecommerce/images/slider/6.jpg') no-repeat center right; background-size: auto 100%;">
+                        style="background: #FFF url('http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/slider/6.jpg') no-repeat center right; background-size: auto 100%;">
                         <div class="container clearfix">
                             <div class="slider-caption" style="margin-top: -30px;">
                                 <div class="emphasis-title nobottommargin">
