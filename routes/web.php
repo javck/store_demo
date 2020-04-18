@@ -89,9 +89,9 @@ Route::group(['prefix' => 'admin'], function () {
 // });
 
 //測試魔法屬性Accessor
-// Route::get('/magic_accessor',function(){
+// Route::get('/magicAccessor',function(){
 //     $user = \App\User::findOrFail(1);
-//     return $user->role;
+//     return $user->roleName;
 // });
 
 //測試Mutator
@@ -115,18 +115,18 @@ Route::group(['prefix' => 'admin'], function () {
 
 //Session工作階段==================================
 //存資料到Session
-Route::get('storesession','SessionController@store');
+//Route::get('storesession','SessionController@store');
 
 //從Session裡頭取資料
-Route::get('getsession','SessionController@get');
+//Route::get('getsession','SessionController@get');
 
 //從Session裡頭取資料
-Route::get('pullsession','SessionController@pull');
+//Route::get('pullsession','SessionController@pull');
 
 //確認Session裡頭是否有某筆資料
-Route::get('hassession','SessionController@exist');
+//Route::get('hassession','SessionController@exist');
 
-Route::get('deletesession','SessionController@delete');
+//Route::get('deletesession','SessionController@delete');
 
 Auth::routes();
 // Route::group(['middleware' => ['web']], function () {
@@ -141,3 +141,8 @@ Auth::routes();
 
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//社群登入路由
+Route::get('/login/{provider}', 'Auth\LoginController@redirectToProvider');
+Route::get('/login/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
+Route::get('/policy','HomeController@policy');

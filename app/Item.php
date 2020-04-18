@@ -9,10 +9,10 @@ class Item extends Model
     protected $fillable = ['title','desc','price','enabled','pic_url','sell_at','cgy_id'];
 
     //示範屬性轉型
-    protected $casts = [
-        'price' => 'string',
-        'created_at' => 'datetime:Y-m-d'
-    ];
+    // protected $casts = [
+    //     'price' => 'string',
+    //     'created_at' => 'datetime:Y-m-d'
+    // ];
 
     //該商品的分類
     protected function cgy(){
@@ -31,6 +31,6 @@ class Item extends Model
 
     }
 
-    
+
 
 }

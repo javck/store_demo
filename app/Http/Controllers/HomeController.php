@@ -34,4 +34,8 @@ class HomeController extends Controller
     public function demo(){
         return view('demo');
     }
+
+    public function policy(){
+        return view('policy');
+    }
 }
