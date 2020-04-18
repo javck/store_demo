@@ -12,7 +12,7 @@
 
                 <div class="row grid-item clearfix">
                     <div class="col-md-2 grid-image">
-                        <img src="{{asset('/images/ecommerce/images/categories/1.jpg')}}" alt="Image 1">
+                        <img src="http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/categories/1.jpg" alt="Image 1">
                     </div>
                     <div class="col-md-2">
                         <div class="grid-info clearfix">
@@ -21,7 +21,7 @@
                         </div>
                     </div>
                     <div class="col-md-2 grid-image">
-                        <img src="{{asset('/images/ecommerce/images/categories/2.jpg')}}" alt="Image 2">
+                        <img src="http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/categories/2.jpg" alt="Image 2">
                     </div>
                     <div class="col-md-2">
                         <div class="grid-info clearfix">
@@ -31,7 +31,7 @@
                     </div>
 
                     <div class="col-md-2 grid-image">
-                        <img src="{{asset('/images/ecommerce/images/categories/3.jpg')}}" alt="Image 1">
+                        <img src="http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/categories/3.jpg" alt="Image 1">
                     </div>
                     <div class="col-md-2">
                         <div class="grid-info clearfix">
@@ -56,7 +56,7 @@
             <div class="row ecommerce-categories clearfix" style="padding: 20px 0 0;">
                 <div class="col-lg-7">
                     <a href="#"
-                        style="background: url('images/ecommerce/images/types/1.jpg') no-repeat center center; background-size: cover;">
+                        style="background: url('http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/types/1.jpg') no-repeat center center; background-size: cover;">
                         <div class="vertical-middle dark center">
                             <div class="heading-block nomargin noborder">
                                 <h3 class="capitalize font-secondary nott t500">Travel</h3>
@@ -66,7 +66,7 @@
                 </div>
                 <div class="col-lg-5">
                     <a href="#"
-                        style="background: url('images/ecommerce/images/types/3.jpg') no-repeat center center; background-size: cover;">
+                        style="background: url('http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/types/3.jpg') no-repeat center center; background-size: cover;">
                         <div class="vertical-middle dark center">
                             <div class="heading-block nomargin noborder">
                                 <h3 class="capitalize font-secondary nott t500">College</h3>
@@ -77,7 +77,7 @@
 
                 <div class="col-lg-4">
                     <a href="#"
-                        style="background: url('images/ecommerce/images/types/5.jpg') no-repeat center center; background-size: cover;">
+                        style="background: url('http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/types/5.jpg') no-repeat center center; background-size: cover;">
                         <div class="vertical-middle dark center">
                             <div class="heading-block nomargin noborder">
                                 <h3 class="capitalize font-secondary nott t500">Leather</h3>
@@ -87,7 +87,7 @@
                 </div>
                 <div class="col-lg-4">
                     <a href="#"
-                        style="background: url('images/ecommerce/images/types/6.jpg') no-repeat center center; background-size: cover;">
+                        style="background: url('http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/types/6.jpg') no-repeat center center; background-size: cover;">
                         <div class="vertical-middle dark center">
                             <div class="heading-block nomargin noborder">
                                 <h3 class="capitalize font-secondary nott t500">Reise</h3>
@@ -97,7 +97,7 @@
                 </div>
                 <div class="col-lg-4">
                     <a href="#"
-                        style="background: url('images/ecommerce/images/types/8.jpg') no-repeat center center; background-size: cover;">
+                        style="background: url('http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/types/8.jpg') no-repeat center center; background-size: cover;">
                         <div class="vertical-middle dark center">
                             <div class="heading-block nomargin noborder">
                                 <h3 class="capitalize font-secondary nott t500">Handmade</h3>
@@ -107,7 +107,7 @@
                 </div>
                 <div class="col-lg-5">
                     <a href="#"
-                        style="background: url('images/ecommerce/images/types/7.jpg') no-repeat center center; background-size: cover;">
+                        style="background: url('http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/types/7.jpg') no-repeat center center; background-size: cover;">
                         <div class="vertical-middle dark center">
                             <div class="heading-block nomargin noborder">
                                 <h3 class="capitalize font-secondary nott t500">Brown</h3>
@@ -118,7 +118,7 @@
 
                 <div class="col-lg-7">
                     <a href="#"
-                        style="background: url('images/ecommerce/images/types/9.jpg') no-repeat center center; background-size: cover;">
+                        style="background: url('http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/types/9.jpg') no-repeat center center; background-size: cover;">
                         <div class="vertical-middle dark center">
                             <div class="heading-block nomargin noborder">
                                 <h3 class="capitalize font-secondary nott t500">Acessories</h3>
@@ -143,11 +143,11 @@
                                 <div class="fslider" data-pagi="false" data-animation="fade" data-slideshow="false">
                                     <div class="flexslider">
                                         <div class="slider-wrap">
-                                            <div class="slide"><a href="#"><img src="/ecommerce/images/items/1-1.jpg"
+                                            <div class="slide"><a href="#"><img src="http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/items/1-1.jpg"
                                                         alt="Grey Bag"></a></div>
-                                            <div class="slide"><a href="#"><img src="/ecommerce/images/items/1-2.jpg"
+                                            <div class="slide"><a href="#"><img src="http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/items/1-2.jpg"
                                                         alt="Grey Bag"></a></div>
-                                            <div class="slide"><a href="#"><img src="/ecommerce/images/items/1-3.jpg"
+                                            <div class="slide"><a href="#"><img src="http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/items/1-3.jpg"
                                                         alt="Grey Bag"></a></div>
                                         </div>
                                     </div>
@@ -176,9 +176,9 @@
                                 <div class="fslider" data-pagi="false" data-animation="fade" data-slideshow="false">
                                     <div class="flexslider">
                                         <div class="slider-wrap">
-                                            <div class="slide"><a href="#"><img src="/ecommerce/images/items/4-1.jpg"
+                                            <div class="slide"><a href="#"><img src="http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/items/4-1.jpg"
                                                         alt="Grey Bag"></a></div>
-                                            <div class="slide"><a href="#"><img src="/ecommerce/images/items/4-2.jpg"
+                                            <div class="slide"><a href="#"><img src="http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/items/4-2.jpg"
                                                         alt="Grey Bag"></a></div>
                                         </div>
                                     </div>
@@ -209,9 +209,9 @@
                                 <div class="fslider" data-pagi="false" data-animation="fade" data-slideshow="false">
                                     <div class="flexslider">
                                         <div class="slider-wrap">
-                                            <div class="slide"><a href="#"><img src="/ecommerce/images/items/2-1.jpg"
+                                            <div class="slide"><a href="#"><img src="http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/items/2-1.jpg"
                                                         alt="Office Bag"></a></div>
-                                            <div class="slide"><a href="#"><img src="/ecommerce/images/items/2-2.jpg"
+                                            <div class="slide"><a href="#"><img src="http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/items/2-2.jpg"
                                                         alt="Office Bag"></a></div>
                                         </div>
                                     </div>
@@ -242,11 +242,11 @@
                                 <div class="fslider" data-pagi="false" data-animation="fade" data-slideshow="false">
                                     <div class="flexslider">
                                         <div class="slider-wrap">
-                                            <div class="slide"><a href="#"><img src="/ecommerce/images/items/3-1.jpg"
+                                            <div class="slide"><a href="#"><img src="http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/items/3-1.jpg"
                                                         alt="Men Bag"></a></div>
-                                            <div class="slide"><a href="#"><img src="/ecommerce/images/items/3-2.jpg"
+                                            <div class="slide"><a href="#"><img src="http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/items/3-2.jpg"
                                                         alt="Men Bag"></a></div>
-                                            <div class="slide"><a href="#"><img src="/ecommerce/images/items/3-3.jpg"
+                                            <div class="slide"><a href="#"><img src="http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/items/3-3.jpg"
                                                         alt="Men Bag"></a></div>
                                         </div>
                                     </div>
@@ -281,22 +281,22 @@
                         <div id="oc-images" class="owl-carousel image-carousel carousel-widget custom-js">
 
                             <div class="oc-item">
-                                <a href="#"><img src="/ecommerce/images/featured/1.jpg" alt="Image 1"></a>
+                                <a href="#"><img src="http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/featured/1.jpg" alt="Image 1"></a>
                             </div>
                             <div class="oc-item">
-                                <a href="#"><img src="/ecommerce/images/featured/2.jpg" alt="Image 2"></a>
+                                <a href="#"><img src="http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/featured/2.jpg" alt="Image 2"></a>
                             </div>
                             <div class="oc-item">
-                                <a href="#"><img src="/ecommerce/images/featured/3.jpg" alt="Image 3"></a>
+                                <a href="#"><img src="http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/featured/3.jpg" alt="Image 3"></a>
                             </div>
                             <div class="oc-item">
-                                <a href="#"><img src="/ecommerce/images/featured/4.jpg" alt="Image 4"></a>
+                                <a href="#"><img src="http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/featured/4.jpg" alt="Image 4"></a>
                             </div>
                             <div class="oc-item">
-                                <a href="#"><img src="/ecommerce/images/featured/5.jpg" alt="Image 5"></a>
+                                <a href="#"><img src="http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/featured/5.jpg" alt="Image 5"></a>
                             </div>
                             <div class="oc-item">
-                                <a href="#"><img src="/ecommerce/images/featured/6.jpg" alt="Image 6"></a>
+                                <a href="#"><img src="http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/featured/6.jpg" alt="Image 6"></a>
                             </div>
 
                         </div>
@@ -335,7 +335,7 @@
 
         <div class="row align-items-stretch bottommargin clearfix">
             <div class="col-md-6"
-                style="background: url('/ecommerce/images/sections/1.jpg') center 45% no-repeat; background-size: cover; padding: 0 0 500px;">
+                style="background: url('http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/sections/1.jpg') center 45% no-repeat; background-size: cover; padding: 0 0 500px;">
                 <div class="section-content topmargin-sm">
                     <h3>Travel Bags for Men</h3>
                     <span class="font-primary">Designed to help you never make your bed again. Superior materials for
@@ -345,7 +345,7 @@
                 </div>
             </div>
             <div class="col-md-6"
-                style="background: url('/ecommerce/images/sections/3.jpg') center center no-repeat; background-size: cover; padding: 0 0 500px;">
+                style="background: url('http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/sections/3.jpg') center center no-repeat; background-size: cover; padding: 0 0 500px;">
                 <div class="section-content topmargin-sm">
                     <h3>Luxury Bags for Women</h3>
                     <span class="font-primary">Globally monetize unique metrics and enterprise markets. Efficiently
@@ -370,7 +370,7 @@
                         <div class="before-heading ls2">0mm - 31mm</div>
                         <h3 class="t400 ls1">Laptop</h3>
                         <div class="fbox-image imagescalein">
-                            <a href="#"><img src="/ecommerce/images/icons/2.png" alt=""></a>
+                            <a href="#"><img src="http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/icons/2.png" alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -379,7 +379,7 @@
                         <div class="before-heading ls2">0mm - 31mm</div>
                         <h3 class="t400 ls1">Hand Bag</h3>
                         <div class="fbox-image imagescalein">
-                            <a href="#"><img src="/ecommerce/images/icons/3.png" alt=""></a>
+                            <a href="#"><img src="http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/icons/3.png" alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -388,7 +388,7 @@
                         <div class="before-heading ls2">0mm - 31mm</div>
                         <h3 class="t400 ls1">Backpack</h3>
                         <div class="fbox-image imagescalein">
-                            <a href="#"><img src="/ecommerce/images/icons/4.png" alt=""></a>
+                            <a href="#"><img src="http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/icons/4.png" alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -397,7 +397,7 @@
                         <div class="before-heading ls2">0mm - 31mm</div>
                         <h3 class="t400 ls1">Duffle</h3>
                         <div class="fbox-image imagescalein">
-                            <a href="#"><img src="/ecommerce/images/icons/5.png" alt=""></a>
+                            <a href="#"><img src="http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/icons/5.png" alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -406,7 +406,7 @@
                         <div class="before-heading ls2">0mm - 31mm</div>
                         <h3 class="t400 ls1">Trolley</h3>
                         <div class="fbox-image imagescalein">
-                            <a href="#"><img src="/ecommerce/images/icons/6.png" alt=""></a>
+                            <a href="#"><img src="http://themes.semicolonweb.com/html/canvas/demos/ecommerce/images/icons/6.png" alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -422,13 +422,13 @@
                     </div>
                     <div class="col-lg-6">
                         <ul class="payment-cards clearfix" style="margin-top: 5px;">
-                            <li><img src="/xmas/images/cards/visa.svg" alt="Visa"></li>
-                            <li><img src="/xmas/images/cards/mc.svg" alt="Master Card"></li>
-                            <li><img src="/xmas/images/cards/ae.svg" alt="American Express"></li>
-                            <li><img src="/xmas/images/cards/pp.svg" alt="PayPal"></li>
-                            <li><img src="/xmas/images/cards/sk.svg" alt="Skrill"></li>
-                            <li><img src="/xmas/images/cards/2co.svg" alt="2CheckOut"></li>
-                            <li><img src="/xmas/images/cards/wu.svg" alt="Western Union"></li>
+                            <li><img src="http://themes.semicolonweb.com/html/canvas/demos/xmas/images/cards/visa.svg" alt="Visa"></li>
+                            <li><img src="http://themes.semicolonweb.com/html/canvas/demos/xmas/images/cards/mc.svg" alt="Master Card"></li>
+                            <li><img src="http://themes.semicolonweb.com/html/canvas/demos/xmas/images/cards/ae.svg" alt="American Express"></li>
+                            <li><img src="http://themes.semicolonweb.com/html/canvas/demos/xmas/images/cards/pp.svg" alt="PayPal"></li>
+                            <li><img src="http://themes.semicolonweb.com/html/canvas/demos/xmas/images/cards/sk.svg" alt="Skrill"></li>
+                            <li><img src="http://themes.semicolonweb.com/html/canvas/demos/xmas/images/cards/2co.svg" alt="2CheckOut"></li>
+                            <li><img src="http://themes.semicolonweb.com/html/canvas/demos/xmas/images/cards/wu.svg" alt="Western Union"></li>
                         </ul>
                     </div>
                 </div>
