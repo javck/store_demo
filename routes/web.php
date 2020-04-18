@@ -32,6 +32,8 @@ Route::get('/home','HomeController@index');
 
 Route::get('/demo','HomeController@demo');
 
+Route::get('/shop','HomeController@shop');
+
 //測試區路由=================================================
 //測試新增資料
 Route::get('/addItem','ItemController@store');
@@ -125,3 +127,17 @@ Route::get('pullsession','SessionController@pull');
 Route::get('hassession','SessionController@exist');
 
 Route::get('deletesession','SessionController@delete');
+
+Auth::routes();
+// Route::group(['middleware' => ['web']], function () {
+//     Auth::routes();
+//     Route::get('login', ['uses' => 'Auth\VoyagerAuthController@login', 'as' => 'login']);
+//     Route::post('login', ['uses' => 'Auth\VoyagerAuthController@postLogin', 'as' => 'postLogin']);
+//     Route::post('logout', ['uses' => 'Auth\VoyagerAuthController@logout', 'as' => 'logout']);
+//     Route::get('admin/login', ['uses' => 'Auth\VoyagerAuthController@login', 'as' => 'voyager.login']);
+//     Route::post('admin/login', ['uses' => 'Auth\VoyagerAuthController@postLogin', 'as' => 'voyager.postlogin']);
+//     Route::post('admin/logout', ['uses' => 'Auth\VoyagerAuthController@logout', 'as' => 'voyager.logout']);
+// });
+
+
+Route::get('/home', 'HomeController@index')->name('home');

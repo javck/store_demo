@@ -528,10 +528,10 @@
                             </div>
                         </div><!-- #top-cart end -->
 
-                        <!-- Top Search
+                        <!-- Top Account
 						============================================= -->
                         <div id="top-account">
-                            <a href="#"><i class="icon-line2-user"></i></a>
+                            @include('includes.top_account')
                         </div><!-- #top-search end -->
 
                     </nav><!-- #primary-menu end -->
