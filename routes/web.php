@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -74,8 +73,55 @@ Route::get('/items/showOrders/{item}','ItemController@showOrders');
 Route::get('/orders/showItems/{order}','OrderController@showItems');
 Route::get('/orders/showContent/{order}','OrderController@showContent');
 
-
-
+//Voyager套件加入的規則
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+//Accessor && Mutator==================================================
+
+//測試Accessor
+// Route::get('/accessor',function(){
+//     $user = \App\User::findOrFail(1);
+//     return $user->avatar;
+// });
+
+//測試魔法屬性Accessor
+// Route::get('/magic_accessor',function(){
+//     $user = \App\User::findOrFail(1);
+//     return $user->role;
+// });
+
+//測試Mutator
+// Route::get('/mutator',function(){
+//     $user = \App\User::findOrFail(1);
+//     $user->name = 'zack';
+//     $user->save();
+//     $user2 = \App\User::findOrFail(1);
+//     return $user2->name;
+// });
+//測試屬性轉型
+// Route::get('/casting',function(){
+//     $item = \App\Item::findOrFail(1);
+//     return gettype($item->price);
+// });
+//測試屬性轉型2
+// Route::get('/casting2',function(){
+//     $item = \App\Item::findOrFail(1);
+//     return $item->toArray();
+// });
+
+//Session工作階段==================================
+//存資料到Session
+Route::get('storesession','SessionController@store');
+
+//從Session裡頭取資料
+Route::get('getsession','SessionController@get');
+
+//從Session裡頭取資料
+Route::get('pullsession','SessionController@pull');
+
+//確認Session裡頭是否有某筆資料
+Route::get('hassession','SessionController@exist');
+
+Route::get('deletesession','SessionController@delete');

@@ -8,6 +8,12 @@ class Item extends Model
 {
     protected $fillable = ['title','desc','price','enabled','pic_url','sell_at','cgy_id'];
 
+    //示範屬性轉型
+    protected $casts = [
+        'price' => 'string',
+        'created_at' => 'datetime:Y-m-d'
+    ];
+
     //該商品的分類
     protected function cgy(){
         //一對一關係完整寫法
@@ -24,5 +30,7 @@ class Item extends Model
         //return $this->belongsToMany(Order::class);
 
     }
+
+    
 
 }
