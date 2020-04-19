@@ -63,6 +63,9 @@ class LoginController extends Controller
         $authUser = $this->findOrCreateUser($user, $provider);
         //進行登入並開啟記得我
         Auth::login($authUser, true);
+
+        return redirect($this->redirectTo);
+
     }
 
     /**假如通過登入提供者驗證後發現使用者已經註冊過，就取得該使用者Record，否則就自動進行簡易註冊動作
