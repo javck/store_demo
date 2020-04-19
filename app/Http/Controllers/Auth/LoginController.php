@@ -78,10 +78,12 @@ class LoginController extends Controller
         if (!$authUser) {
             //可能已經用其他管道註冊過
             $authUser = \App\User::where('email', $user->email)->first();
-            $authUser->provider = $provider;
-            $authUser->provider_id = $user->id;
-            $authUser->role_id = 2;
-            $authUser->save();
+            if($authUser){
+                $authUser->provider = $provider;
+                $authUser->provider_id = $user->id;
+                $authUser->role_id = 2;
+                $authUser->save();
+            }
         }
 
         if ($authUser) {
@@ -94,7 +96,7 @@ class LoginController extends Controller
             'provider' => $provider,
             'provider_id' => $user->id,
             ];
-            if ($provider == 'facebook') {
+            if (strtolower($provider) == 'facebook') {
                 $data['fb_id'] = $user->id;
             }
             return \App\User::create($data);
