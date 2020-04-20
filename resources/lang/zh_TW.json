@@ -14,5 +14,6 @@
     "A fresh verification link has been sent to your email address." : "已有驗證連結寄送到您的電子郵箱",
     "Before proceeding, please check your email for a verification link." : "再繼續之前，請確認你的電子郵箱，尋找驗證連結",
     "If you did not receive the email" : "如果沒有收到郵件",
-    "click here to request another" : "點此來重新寄送"
+    "click here to request another" : "點此來重新寄送",
+    "Close" : "關閉"
 }

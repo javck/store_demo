@@ -41,6 +41,9 @@ Route::get('/addItem','ItemController@store');
 Route::get('/updateItem/{item}','ItemController@update');
 //測試刪除資料
 Route::get('/deleteItem/{item}','ItemController@destroy');
+//顯示Flash Message
+Route::get('/showflashmsg','HomeController@showflashMsg');
+
 //=========================================================
 
 //指派給控制器的某個Action，限定登入才能訪問
@@ -61,7 +64,7 @@ Route::get('/deleteItem/{item}','ItemController@destroy');
 //  return "你購買的是第" . $id . "個商品";
 // });
 
-//Route Model Binding
+//Route Model Binding=====================================
 Route::get('/users/{user}',function(\App\User $user){
     return $user;
 });
@@ -75,7 +78,7 @@ Route::get('/items/showOrders/{item}','ItemController@showOrders');
 Route::get('/orders/showItems/{order}','OrderController@showItems');
 Route::get('/orders/showContent/{order}','OrderController@showContent');
 
-//Voyager套件加入的規則
+//Voyager套件加入的規則===================================================
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
@@ -131,8 +134,10 @@ Route::group(['prefix' => 'admin'], function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/policy', 'HomeController@policy');
 
-//社群登入路由
+
+//社群登入路由=================================================
 Route::get('/login/{provider}', 'Auth\LoginController@redirectToProvider');
 Route::get('/login/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
-Route::get('/policy','HomeController@policy');
+//===========================================================
