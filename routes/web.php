@@ -140,4 +140,12 @@ Route::get('/policy', 'HomeController@policy');
 //社群登入路由=================================================
 Route::get('/login/{provider}', 'Auth\LoginController@redirectToProvider');
 Route::get('/login/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
-//===========================================================
+//購物車示範===================================================
+Route::get('/addCart','ShopController@addCart');
+Route::get('/updateCart','ShopController@updateCart');
+Route::get('/removeCart','ShopController@removeCart');
+Route::get('/showCart','ShopController@showCart');
+Route::get('/checkCart','ShopController@checkCart');
+Route::get('showTotal','ShopController@showTotal');
+Route::get('clearCart', 'ShopController@clearCart');
+
