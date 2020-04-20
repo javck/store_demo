@@ -675,8 +675,8 @@
         {{--  挖洞給子視圖去填  --}}
         @yield('content')
 
-        {{-- 載入include.blade.php  --}}
-        @include('include')
+        {{-- 載入footer  --}}
+        @include('includes.footer')
 
     </div><!-- #wrapper end -->
 

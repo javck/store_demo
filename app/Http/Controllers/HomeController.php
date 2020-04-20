@@ -32,7 +32,7 @@ class HomeController extends Controller
     }
 
     public function demo(){
-        return view('demo');
+        return view('demo.demoblade');
     }
 
     public function policy(){

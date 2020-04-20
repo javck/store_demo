@@ -1,5 +1,5 @@
 {{--  繼承了master.blade.php  --}}
-@extends('master')
+@extends('layouts.master')
 
 {{--  填名為content的洞  --}}
 @section('content')
