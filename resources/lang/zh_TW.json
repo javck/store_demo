@@ -1,0 +1,18 @@
+{
+    "Login" : "登入",
+    "E-Mail Address" : "電子郵箱",
+    "Username" : "帳號",
+    "Password" : "密碼",
+    "Remember me" : "記得我",
+    "Forget password" : "忘記密碼",
+    "Facebook login" : "臉書登入",
+    "Google+ login" : "Google+登入",
+    "Register" : "註冊",
+    "Name" : "姓名",
+    "Check password" : "確認密碼",
+    "Verify Your Email Address" : "確認你的電子郵箱",
+    "A fresh verification link has been sent to your email address." : "已有驗證連結寄送到您的電子郵箱",
+    "Before proceeding, please check your email for a verification link." : "再繼續之前，請確認你的電子郵箱，尋找驗證連結",
+    "If you did not receive the email" : "如果沒有收到郵件",
+    "click here to request another" : "點此來重新寄送"
+}
