@@ -107,41 +107,6 @@
 
         </header><!-- #header end -->
 
-        <!-- Slider
-		============================================= -->
-        <section id="slider" class="slider-element swiper_wrapper full-screen clearfix" data-autoplay="9000"
-            data-speed="800" data-loop="true" data-grab="false">
-
-            <div class="swiper-container swiper-parent">
-                <div class="swiper-wrapper">
-                    @foreach ($sliders as $slider)
-                        <div class="swiper-slide"
-                            style="background: #FFF url('{{ $slider->pic }}') no-repeat center right; background-size: auto 100%;">
-                            <div class="container clearfix">
-                                <div class="slider-caption" style="margin-top: -30px;">
-                                    <div class="emphasis-title nobottommargin">
-                                        <h2 class="bottommargin t700"
-                                            style="max-width: 600px; font-size: 80px; font-family: 'Montserrat'; line-height: 1.2;">
-                                            {!! $slider->title !!}</h2>
-
-                                        <p class="lead topmargin-sm d-none d-sm-block"
-                                            style="max-width: 600px; font-family: 'Poppins'; color: #999; font-size: 18px;">
-                                            {!! $slider->content !!}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slide-number font-primary">O{{ $loop->iteration }}</div>
-                        </div>
-                    @endforeach
-                </div>
-                <div class="slider-arrow-left"><i class="icon-line-arrow-left"></i></div>
-                <div class="slider-arrow-right"><i class="icon-line-arrow-right"></i></div>
-            </div>
-
-        </section><!-- #Slider End -->
-
-        <!-- Content
-		============================================= -->
         {{--  挖洞給子視圖去填  --}}
         @yield('content')
 
@@ -209,8 +174,9 @@
             loop: true,
         });
 
+        <!-- Flash Message Overlay會用到，需保留 -->
+        $('#flash-overlay-modal').modal();
 
-
-        <
-        /body> < /
-        html >
+        <!-- Flash Message 3秒之後消失，非必須 -->
+        $('div.alert').delay(3000).fadeOut(350);
+    </script>

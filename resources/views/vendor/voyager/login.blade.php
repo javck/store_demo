@@ -115,7 +115,7 @@
                     </form>
 
                     <div style="clear:both"></div>
-
+                    <br>管理員帳密 admin/password
                     @if(!$errors->isEmpty())
                     <div class="alert alert-red">
                         <ul class="list-unstyled">

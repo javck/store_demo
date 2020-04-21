@@ -98,4 +98,10 @@ class Element extends Model
         }
 
     }
+
+    //基本查詢組合Scope
+    public function scopeBasic( $query )
+    {
+        return $query->where('enabled',true)->orderBy('sort','asc');
+    }
 }

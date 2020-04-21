@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+{{--  繼承了master.blade.php  --}}
+@extends('layouts.master')
+
+{{--  填名為content的洞  --}}
+@section('content')
+<div class="container clearfix">
     @php
     $isTrue = false;
     $items = [
@@ -63,6 +60,6 @@
     global_tel:{{ $global_tel }}<br>
     partial_tel:{{ $partial_tel }}
 
-</body>
-</html>
+</div>
+@stop
 

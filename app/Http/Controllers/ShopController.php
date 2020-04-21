@@ -20,42 +20,13 @@ class ShopController extends Controller
         $item_name = "Laravel5.8從入門到實戰";
         $price     = 2400;
         $title = "Laravel";
-        if(Auth::check()){
-            $cartContent= \Cart::session(Auth()->user()->id)->getContent();
-            $cartQty = \Cart::session(Auth()->user()->id)->getTotalQuantity();
-        }else{
-            $cartContent = [];
-            $cartQty = 0;
-        }
 
         $cgies = \App\Cgy::where('enabled',true)->orderBy('sort','asc')->get();
         $items = \App\Item::where('enabled',true)->orderBy('created_at','asc')->limit(4)->get();
-        $sliders = \App\Element::where('page','shop')->where('position','slider')->where('enabled',true)->orderBy('sort','asc')->get();
+        $sliders = \App\Element::where('page','shop')->where('position','slider')->basic()->get();
         //compact()能夠幫你把變數打包成一個陣列，變數名稱作為鍵
-        return view('shop', compact('item_name','price','title','cartContent','cartQty','cgies','items','sliders')); //用view()的第二參數搭配compact()傳遞參數包
+        return view('shop', compact('item_name','price','title','cgies','items','sliders')); //用view()的第二參數搭配compact()傳遞參數包
         //return view('shop'); //沒傳變數的版本，現在會報錯
-    }
-
-    public function showCart(Request $request){
-        if(Auth::check()){
-            //取得購物車內容
-            $content = \Cart::session(Auth()->user()->id)->getContent();
-            return $content;
-            //取用屬性參考，echo不能用，只做範例
-//             foreach($content as $row) {
-//                 echo $row->id; // row ID
-//                 echo $row->name;
-//                 echo $row->qty;
-//                 echo $row->price;
-//                 echo $row->attributes; //額外屬性
-//                 echo $item->associatedModel->id; // 取得商品模型實例的流水號
-//                 echo $item->associatedModel->title; // 取得商品模型實例的名稱
-//                 echo $item->associatedModel->desc; // 取得商品模型實例的描述
-//             }
-
-        }else{
-            return redirect('/login');
-        }
     }
 
     public function addCart(Request $request,$productId){
@@ -104,6 +75,28 @@ class ShopController extends Controller
             //移除商品
             \Cart::session($userID)->remove($rowId);
             return redirect('/showCart');
+        }else{
+            return redirect('/login');
+        }
+    }
+
+    public function showCart(Request $request){
+        if(Auth::check()){
+            //取得購物車內容
+            $content = \Cart::session(Auth()->user()->id)->getContent();
+            return $content;
+            //取用屬性參考，echo不能用，只做範例
+//             foreach($content as $row) {
+//                 echo $row->id; // row ID
+//                 echo $row->name;
+//                 echo $row->quantity;
+//                 echo $row->price;
+//                 echo $row->attributes; //額外屬性
+//                 echo $item->associatedModel->id; // 取得商品模型實例的流水號
+//                 echo $item->associatedModel->title; // 取得商品模型實例的名稱
+//                 echo $item->associatedModel->desc; // 取得商品模型實例的描述
+//             }
+
         }else{
             return redirect('/login');
         }
@@ -170,7 +163,7 @@ class ShopController extends Controller
                 \App\OrderItem::create([
                     'order_id' => $order->id,
                     'item_id' => $row->id,
-                    'qty' => $row->qty
+                    'qty' => $row->quantity
                 ]);
             }
             //清空購物車

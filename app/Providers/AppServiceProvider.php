@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Auth;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -26,13 +27,20 @@ class AppServiceProvider extends ServiceProvider
   */
  public function boot()
  {
-  //提供資料給所有視圖
-  View()->share('global_tel', '0212345678');
+    //提供資料給所有視圖
+    View()->share('global_tel', '0212345678');
+    if(Auth::check()){
+        View()->share('cartContent', \Cart::getContent());
+        View()->share('cartQty',\Cart::session(Auth()->user()->id)->getTotalQuantity());
+    }else{
+        View()->share('cartContent', []);
+        View()->share('cartQty', 0);
+    }
 
-  //提供資料給部分視圖
-  view()->composer(['demo.demoblade', 'shop'], function ($view) {
-   $view->with('partial_tel', '0223456789');
-  });
+    //提供資料給部分視圖
+    view()->composer(['demo.demoblade', 'shop'], function ($view) {
+        $view->with('partial_tel', '0223456789');
+    });
  }
 
  public function url($uri)

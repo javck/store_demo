@@ -34,6 +34,8 @@ Route::get('/demo','HomeController@demo');
 
 Route::get('/shop','ShopController@shop');
 
+Route::get('/localized','HomeController@localized');
+
 //測試區路由=================================================
 //測試新增資料
 Route::get('/addItem','ItemController@store');
