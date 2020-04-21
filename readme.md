@@ -12,3 +12,6 @@ php artisan migate
 php artisan db:seed
 
 如果過程中遇到問題，建議將資料庫所有表格刪除後，重新再執行以上指令。
+
+##後台登入帳密
+管理員 admin/password

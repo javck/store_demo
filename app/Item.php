@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Voyager;
 
 class Item extends Model
 {
@@ -29,6 +30,14 @@ class Item extends Model
         //多對多關係簡易寫法
         //return $this->belongsToMany(Order::class);
 
+    }
+
+    public function getPicUrlAttribute($value){
+        if(substr( $value, 0, 4 ) === "http" || substr( $value, 0, 5 ) === "https" ){
+            return $value;
+        }else{
+            return Voyager::image($value);
+        }
     }
 
 

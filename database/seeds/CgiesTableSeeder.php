@@ -13,6 +13,6 @@ class CgiesTableSeeder extends Seeder
     public function run()
     {
         Cgy::truncate();
-        factory(App\Cgy::class,10)->create();
+        factory(App\Cgy::class,6)->create();
     }
 }

@@ -12,34 +12,14 @@
 						<div class="col-lg-6 col-md-6">
 
 							<div class="row clearfix">
-								<div class="col-lg-6">
-									<div class="widget widget_links clearfix">
-										<h4>{{ $title }}</h4>
-										<ul>
-											<li><a href="#">Documentation</a></li>
-											<li><a href="#">Feedback</a></li>
-											<li><a href="#">Plugins</a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="col-lg-6">
-									<div class="widget widget_links clearfix">
-										<h4>Community</h4>
-										<ul>
-											<li><a href="#">Documentation</a></li>
-											<li><a href="#">Feedback</a></li>
-											<li><a href="#">Plugins</a></li>
-											<li><a href="#">Support Forums</a></li>
-										</ul>
-									</div>
-								</div>
+								{{ menu('footer','footer_menu') }}
 							</div>
 
 							<div class="clear"></div>
 
 							<div class="line line-sm"></div>
 
-							<div class="copy-link"><a href="mailto:noreply@canvas.com"><i class="icon-envelope2"></i>  info@canvas.com</a> <span class="middot"> | </span> <a href="tel:+91-11-6541-6369"><i class="icon-headphones"></i> +91-11-6541-6369</a> <span class="middot"> | </span> <a href="skype:CanvasOnSkype?call"><i class="icon-skype2"></i> CanvasOnSkype</a></div>
+							<div class="copy-link"><a href="mailto:{{ setting('site.service_mail') }}"><i class="icon-envelope2"></i>  {{ setting('site.service_mail') }}</a> <span class="middot"> | </span> <a href="tel:{{ setting('site.service_tel') }}"><i class="icon-headphones"></i> {{ setting('site.service_tel') }}</a> <span class="middot"></div>
 
 						</div>
 

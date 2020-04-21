@@ -9,6 +9,32 @@ use Auth;
 
 class ShopController extends Controller
 {
+    //顯示商店頁
+    public function shop()
+    {
+        //$data = ['item_name' => "Laravel5.8從入門到實戰" , 'price' => 2400];
+        //return view('shop')->with($data); //用with()傳遞參數包
+
+        //return view('shop',$data); //用view()的第二參數傳遞參數包
+
+        $item_name = "Laravel5.8從入門到實戰";
+        $price     = 2400;
+        $title = "Laravel";
+        if(Auth::check()){
+            $cartContent= \Cart::session(Auth()->user()->id)->getContent();
+            $cartQty = \Cart::session(Auth()->user()->id)->getTotalQuantity();
+        }else{
+            $cartContent = [];
+            $cartQty = 0;
+        }
+
+        $cgies = \App\Cgy::where('enabled',true)->orderBy('sort','asc')->get();
+        $items = \App\Item::where('enabled',true)->orderBy('created_at','asc')->limit(4)->get();
+        $sliders = \App\Element::where('page','shop')->where('position','slider')->where('enabled',true)->orderBy('sort','asc')->get();
+        //compact()能夠幫你把變數打包成一個陣列，變數名稱作為鍵
+        return view('shop', compact('item_name','price','title','cartContent','cartQty','cgies','items','sliders')); //用view()的第二參數搭配compact()傳遞參數包
+        //return view('shop'); //沒傳變數的版本，現在會報錯
+    }
 
     public function showCart(Request $request){
         if(Auth::check()){
@@ -32,14 +58,10 @@ class ShopController extends Controller
         }
     }
 
-    public function addCart(Request $request){
+    public function addCart(Request $request,$productId){
         if (Auth::check()) {
-            $productId = 1;
             $item      = Item::findOrFail($productId);
             $rowId     = $productId;
-            $product2Id = 2;
-            $item2      = Item::findOrFail($product2Id);
-            $row2Id     = $product2Id;
             $userID    = Auth::user()->id;
 
             //將商品1放入購物車
@@ -51,24 +73,14 @@ class ShopController extends Controller
                 'attributes' =>  array(),
                 'associatedModel' => $item
             ));
-            //將商品2放入購物車
-            \Cart::session($userID)->add(array(
-                'id' => $row2Id,
-                'name' => $item2->title,
-                'price' => $item2->price,
-                'quantity' => 1,
-                'attributes' =>  array(),
-                'associatedModel' => $item2
-            ));
-            return redirect('/showCart');
+            return redirect('/shop');
         }else{
             return redirect('/login');
         }
     }
 
-    public function updateCart(Request $request){
+    public function updateCart(Request $request,$productId){
         if (Auth::check()) {
-            $productId = 1;
             $item      = Item::findOrFail($productId);
             $rowId     = $productId;
             $userID    = Auth::user()->id;
@@ -83,9 +95,8 @@ class ShopController extends Controller
         }
     }
 
-    public function removeCart(Request $request){
+    public function removeCart(Request $request,$productId){
         if (Auth::check()) {
-            $productId = 1;
             $item      = Item::findOrFail($productId);
             $rowId     = $productId;
             $userID    = Auth::user()->id;
@@ -100,7 +111,6 @@ class ShopController extends Controller
 
     public function checkCart(Request $request){
         if (Auth::check()) {
-            $productId = 1;
             $userID    = Auth::user()->id;
 
             //確認購物車是否為空的
@@ -139,6 +149,35 @@ class ShopController extends Controller
             //清空購物車
             \Cart::session($userID)->clear();
             return redirect('/showCart');
+        }else{
+            return redirect('/login');
+
+        }
+    }
+
+    //送出訂單
+    public function checkout(Request $request){
+        if (Auth::check()) {
+            $userID    = Auth::user()->id;
+            //建立訂單
+            $order = \App\Order::create([
+                'user_id' => $userID
+            ]);
+
+            //建立訂單明細
+            $cartContent = \Cart::session($userID)->getContent();
+            foreach ($cartContent as $row) {
+                \App\OrderItem::create([
+                    'order_id' => $order->id,
+                    'item_id' => $row->id,
+                    'qty' => $row->qty
+                ]);
+            }
+            //清空購物車
+            \Cart::session($userID)->clear();
+            flash('訂單已送出')->success()->important();
+
+            return redirect('/shop');
         }else{
             return redirect('/login');
 

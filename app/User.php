@@ -51,8 +51,8 @@ class User extends \TCG\Voyager\Models\User
     }
 
     //示範Mutator
-    public function setNameAttribute($value)
-    {
-        $this->attributes['name'] = 'name:' . $value;
-    }
+    // public function setNameAttribute($value)
+    // {
+    //     $this->attributes['name'] = 'name:' . $value;
+    // }
 }
