@@ -102,7 +102,9 @@
                         <!-- Top Cart
 						============================================= -->
                         <div id="top-cart">
-                            @include('includes.top_cart')
+                            @if (isset($cartContent) && isset($cartQty))
+                                @include('includes.top_cart')
+                            @endif
                         </div><!-- #top-cart end -->
 
                         <!-- Top Account

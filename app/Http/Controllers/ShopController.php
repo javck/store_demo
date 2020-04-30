@@ -24,8 +24,16 @@ class ShopController extends Controller
         $cgies = \App\Cgy::where('enabled',true)->orderBy('sort','asc')->get();
         $items = \App\Item::where('enabled',true)->orderBy('created_at','asc')->limit(4)->get();
         $sliders = \App\Element::where('page','shop')->where('position','slider')->basic()->get();
+        if(Auth::check()){
+            $cartContent = \Cart::session(Auth()->user()->id)->getContent();
+            $cartQty= \Cart::session(Auth()->user()->id)->getTotalQuantity();
+        }else{
+            $cartContent =[];
+            $cartQty= 0;
+        }
+
         //compact()能夠幫你把變數打包成一個陣列，變數名稱作為鍵
-        return view('shop', compact('item_name','price','title','cgies','items','sliders')); //用view()的第二參數搭配compact()傳遞參數包
+        return view('shop', compact('item_name','price','title','cgies','items','sliders','cartContent','cartQty')); //用view()的第二參數搭配compact()傳遞參數包
         //return view('shop'); //沒傳變數的版本，現在會報錯
     }
 
@@ -44,6 +52,7 @@ class ShopController extends Controller
                 'attributes' =>  array(),
                 'associatedModel' => $item
             ));
+            flash('已加入購物車')->success()->important();
             return redirect('/shop');
         }else{
             return redirect('/login');
@@ -60,6 +69,7 @@ class ShopController extends Controller
             \Cart::session($userID)->update($rowId,array(
                 'quantity' => -10, //數量更新多少而不是設為多少，-10意思是扣掉10個
             ));
+            flash('已更新購物車')->success()->important();
             return redirect('/showCart');
         }else{
             return redirect('/login');
@@ -74,6 +84,7 @@ class ShopController extends Controller
 
             //移除商品
             \Cart::session($userID)->remove($rowId);
+            flash('已移除購物車的商品')->success()->important();
             return redirect('/showCart');
         }else{
             return redirect('/login');
@@ -141,6 +152,7 @@ class ShopController extends Controller
             $userID    = Auth::user()->id;
             //清空購物車
             \Cart::session($userID)->clear();
+            flash('已清空購物車')->success()->important();
             return redirect('/showCart');
         }else{
             return redirect('/login');
