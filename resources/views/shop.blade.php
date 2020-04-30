@@ -1,3 +1,6 @@
+@php
+use App\Http\Model\Helper;
+@endphp
 {{--  繼承了master.blade.php  --}}
 @extends('layouts.master')
 
@@ -114,13 +117,13 @@
                     </div>
                     <div class="col-lg-6">
                         <ul class="payment-cards clearfix" style="margin-top: 5px;">
-                            <li><img src="http://themes.semicolonweb.com/html/canvas/demos/xmas/images/cards/visa.svg" alt="Visa"></li>
-                            <li><img src="http://themes.semicolonweb.com/html/canvas/demos/xmas/images/cards/mc.svg" alt="Master Card"></li>
-                            <li><img src="http://themes.semicolonweb.com/html/canvas/demos/xmas/images/cards/ae.svg" alt="American Express"></li>
-                            <li><img src="http://themes.semicolonweb.com/html/canvas/demos/xmas/images/cards/pp.svg" alt="PayPal"></li>
-                            <li><img src="http://themes.semicolonweb.com/html/canvas/demos/xmas/images/cards/sk.svg" alt="Skrill"></li>
-                            <li><img src="http://themes.semicolonweb.com/html/canvas/demos/xmas/images/cards/2co.svg" alt="2CheckOut"></li>
-                            <li><img src="http://themes.semicolonweb.com/html/canvas/demos/xmas/images/cards/wu.svg" alt="Western Union"></li>
+                            <li><img src="{{ Helper::url('demos/xmas/images/cards/visa.svg') }}" alt="Visa"></li>
+                            <li><img src="{{ Helper::url('demos/xmas/images/cards/mc.svg') }}" alt="Master Card"></li>
+                            <li><img src="{{ Helper::url('demos/xmas/images/cards/ae.svg') }}" alt="American Express"></li>
+                            <li><img src="{{ Helper::url('demos/xmas/images/cards/pp.svg') }}" alt="PayPal"></li>
+                            <li><img src="{{ Helper::url('demos/xmas/images/cards/sk.svg') }}" alt="Skrill"></li>
+                            <li><img src="{{ Helper::url('demos/xmas/images/cards/2co.svg') }}" alt="2CheckOut"></li>
+                            <li><img src="{{ Helper::url('demos/xmas/images/cards/wu.svg') }}" alt="Western Union"></li>
                         </ul>
                     </div>
                 </div>

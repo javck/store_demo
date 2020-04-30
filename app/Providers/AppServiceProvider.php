@@ -45,7 +45,8 @@ class AppServiceProvider extends ServiceProvider
 
  public function url($uri)
  {
-  return 'http://themes.semicolonweb.com/html/canvas/' . $uri;
+    $protocol = Request::server('HTTP_X_FORWARDED_PROTO');
+    return $protocol .'://themes.semicolonweb.com/html/canvas/' . $uri;
  }
 
 }

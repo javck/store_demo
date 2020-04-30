@@ -20,7 +20,7 @@
     生成示範資料指令：php artisan db:seed
 
     上傳素材
-    素材網址：https://reurl.cc/D9jX2O
+    素材網址：https://reurl.cc/xZa75Z
 
     1.將assets檔案放置於/public資料夾
     作法為下載assets.zip後，上傳至/public資料夾後進行解壓縮
