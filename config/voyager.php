@@ -140,7 +140,7 @@ return [
             ],
             '粉絲頁' => [
                 'route'        => '/facebook',
-                'icon_class'   => 'voyager-paw',
+                'icon_class'   => 'voyager-anchor',
                 'target_blank' => true,
             ],
             '登出' => [

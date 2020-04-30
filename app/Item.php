@@ -2,13 +2,17 @@
 
 namespace App;
 
+use TCG\Voyager\Traits\Translatable;
 use Illuminate\Database\Eloquent\Model;
 use Voyager;
 
 class Item extends Model
 {
+    use Translatable;
+
     protected $fillable = ['title','desc','price','enabled','pic_url','sell_at','cgy_id'];
 
+    protected $translatable = ['title', 'desc'];
     //示範屬性轉型
     // protected $casts = [
     //     'price' => 'string',
