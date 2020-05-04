@@ -137,7 +137,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/policy', 'HomeController@policy');
-
+Route::get('/sendmail','HomeController@sendMail');
 
 //社群登入路由=================================================
 Route::get('/login/{provider}', 'Auth\LoginController@redirectToProvider');

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Mail;
+use App\Mail\Notify;
 
 class HomeController extends Controller
 {
@@ -37,5 +39,19 @@ class HomeController extends Controller
         //flash('訊息內容')->error()->important(); //外框為紅色，為Flash Message加上關閉功能
 
         return view('demo.flashmessage');
+    }
+
+    public function sendMail(){
+        //撰寫收信人資料
+        $to = collect([['name' => '哥布林',
+                        'email' => 'info@goblinlab.org']]);
+
+        //準備信件內容參數
+        $params = ['title' => '恭喜得到報名優惠',
+                    'content' => '請立刻到官網來查詢優惠內容，時間有限，敬請把握!!'];
+        Mail::to( $to )->send( new Notify($params) );
+        flash('已發信成功')->success()->important();
+        return redirect('/shop');
+
     }
 }
