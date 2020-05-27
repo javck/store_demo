@@ -23,7 +23,7 @@
     素材網址：https://reurl.cc/3DypdM
 
     1.將assets檔案放置於/public資料夾
-    作法為下載assets.zip後，上傳至/public資料夾後進行解壓縮
+    作法為下載assets.zip後，上傳至/public資料夾後進行解壓縮。若出現asset資料夾，把裡頭的js和css資料夾移到/publics資料夾後刪除asset資料夾
 
     2.將圖檔放置於/storage/app/public
     作法為下載storage_public.zip後，將所有內容放進/storage/app/public資料夾
