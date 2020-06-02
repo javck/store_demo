@@ -19,6 +19,8 @@
     安裝完Voyager之後，生成示範資料
     生成示範資料指令：php artisan db:seed
 
+    生成storage捷徑指令：php artisan storage:link
+
     上傳素材
     素材網址：https://reurl.cc/3DypdM
 
