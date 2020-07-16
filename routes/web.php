@@ -15,7 +15,9 @@ Route::get('/hello',function(){
 });
 
 //回傳視圖
-Route::get('/', 'HomeController@index');
+//Route::get('/', 'HomeController@index');
+Route::get('/', 'ShopController@shop');
+
 
 //Match，符合多種請求方法
 Route::match(['get', 'post'], '/match', function() {
