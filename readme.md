@@ -1,6 +1,11 @@
 範例說明
 =======
 
+## 使用提示
+
+    本範例專案的版型使用的是付費版型Canvas，相關內容並不包含在版本控管的檔案內。因此未導入Canvas套版檔案的學員，你看到的畫面將會跑版，此為正常現象，你可考慮自行調整版型或者是購買Canvas套版來導入。
+    有購買Canvas套版的學員，請參考Canvas教學單元的說明，將CSS以及JS檔案導入，就能夠讓畫面正常顯示。
+
 ## 初始化
 
     將本專案clone到本地端之後，需先下載套件並新增.env以及資料庫。
@@ -22,7 +27,11 @@
     生成storage捷徑指令：php artisan storage:link
 
     上傳素材
-    素材網址：https://reurl.cc/3DypdM
+    素材網址：https://reurl.cc/3DypdM(存放於OneDrive，如果無法開啟請改用下方連結)
+
+    替代下載網址：
+    assets檔案：https://goblinlab.org/downloads/assets.zip
+    圖檔：https://goblinlab.org/downloads/storage_public.zip
 
     1.將assets檔案放置於/public資料夾
     作法為下載assets.zip後，上傳至/public資料夾後進行解壓縮。若出現asset資料夾，把裡頭的js和css資料夾移到/publics資料夾後刪除asset資料夾

@@ -1,6 +1,3 @@
-@php
-    use App\Http\Model\Helper;
-@endphp
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 
@@ -26,21 +23,29 @@
     <link
         href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Montserrat:300,400,500,600,700|Merriweather:300,400,300i,400i"
         rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="{{ asset('css/all.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('style.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('css/swiper.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('css/dark.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('css/font-icons.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('css/animate.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}" type="text/css" />
+
     <!-- eCommerce Demo Specific Stylesheet -->
-    <link rel="stylesheet" href="{{ Helper::url('demos/ecommerce/ecommerce.css') }}" type="text/css" />
-    <link rel="stylesheet" href="{{ Helper::url('demos/ecommerce/css/fonts.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('demos/ecommerce/ecommerce.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('demos/ecommerce/css/fonts.css') }}" type="text/css" />
     <!-- / -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link rel="stylesheet" type="text/css"
-        href="{{ Helper::url('include/rs-plugin/css/settings.css') }}" media="screen" />
+        href="{{ asset('include/rs-plugin/css/settings.css') }}" media="screen" />
     <link rel="stylesheet" type="text/css"
-        href="{{ Helper::url('include/rs-plugin/css/layers.css') }}">
+        href="{{ asset('include/rs-plugin/css/layers.css') }}">
     <link rel="stylesheet" type="text/css"
-        href="{{ Helper::url('include/rs-plugin/css/navigation.css') }}">
+        href="{{ asset('include/rs-plugin/css/navigation.css') }}">
 
-    <link rel="stylesheet" href="{{ Helper::url('css/colors.php?color=000000') }}"
+    <link rel="stylesheet" href="{{ asset('css/colors.php?color=000000') }}"
         type="text/css" />
 
     <!-- Document Title
@@ -135,42 +140,42 @@
 
     <!-- External JavaScripts
 	============================================= -->
-    <script src="{{ Helper::url('js/jquery.js') }}"></script>
-    <script src="{{ Helper::url('js/plugins.js') }}"></script>
-    <script src="{{ Helper::url('js/functions.js') }}"></script>
+    <script src="{{ asset('js/jquery.js') }}"></script>
+    <script src="{{ asset('js/plugins.js') }}"></script>
+    <script src="{{ asset('js/functions.js') }}"></script>
 
     <!-- SLIDER REVOLUTION 5.x SCRIPTS  -->
-    <script src="{{ Helper::url('include/rs-plugin/js/jquery.themepunch.tools.min.js') }}">
+    <script src="{{ asset('include/rs-plugin/js/jquery.themepunch.tools.min.js') }}">
     </script>
-    <script src="{{ Helper::url('include/rs-plugin/js/jquery.themepunch.revolution.min.js') }}">
+    <script src="{{ asset('include/rs-plugin/js/jquery.themepunch.revolution.min.js') }}">
     </script>
 
     <script
-        src="{{ Helper::url('include/rs-plugin/js/extensions/revolution.extension.actions.min.js') }}">
+        src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.actions.min.js') }}">
     </script>
     <script
-        src="{{ Helper::url('include/rs-plugin/js/extensions/revolution.extension.carousel.min.js') }}">
+        src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.carousel.min.js') }}">
     </script>
     <script
-        src="{{ Helper::url('include/rs-plugin/js/extensions/revolution.extension.kenburn.min.js') }}">
+        src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.kenburn.min.js') }}">
     </script>
     <script
-        src="{{ Helper::url('include/rs-plugin/js/extensions/revolution.extension.layeranimation.min.js') }}">
+        src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.layeranimation.min.js') }}">
     </script>
     <script
-        src="{{ Helper::url('include/rs-plugin/js/extensions/revolution.extension.migration.min.js') }}">
+        src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.migration.min.js') }}">
     </script>
     <script
-        src="{{ Helper::url('include/rs-plugin/js/extensions/revolution.extension.navigation.min.js') }}">
+        src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.navigation.min.js') }}">
     </script>
     <script
-        src="{{ Helper::url('include/rs-plugin/js/extensions/revolution.extension.parallax.min.js') }}">
+        src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.parallax.min.js') }}">
     </script>
     <script
-        src="{{ Helper::url('include/rs-plugin/js/extensions/revolution.extension.slideanims.min.js') }}">
+        src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.slideanims.min.js') }}">
     </script>
     <script
-        src="{{ Helper::url('include/rs-plugin/js/extensions/revolution.extension.video.min.js') }}">
+        src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.video.min.js') }}">
     </script>
 
     <!-- ADD-ONS JS FILES -->
